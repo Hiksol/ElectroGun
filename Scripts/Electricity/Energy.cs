@@ -7,17 +7,12 @@ public class Energy : MonoBehaviour
 {
     [SerializeField] private float energyCapacity = 100f;
     [SerializeField] private float energy = -1;
-    // Start is called before the first frame update
+    
     protected virtual void Start()
     {
         setupEnergy();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     protected void setupEnergy()
     {
         if (energy == -1)
@@ -34,7 +29,6 @@ public class Energy : MonoBehaviour
             energy -= amount;
             return true;
         }
-        //energy = 0;
         return false;
     }
     public bool increaseEnergyBy(float amount) 
@@ -44,7 +38,6 @@ public class Energy : MonoBehaviour
             energy += amount;
             return true;
         }
-        //energy = energyCapacity;
         return false;
     }
     public void setEnergy(float amount)
