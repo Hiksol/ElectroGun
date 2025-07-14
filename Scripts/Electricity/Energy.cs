@@ -8,8 +8,7 @@ public class Energy : MonoBehaviour
     [SerializeField] private float energyCapacity = 100f;
     [SerializeField] private float energy = -1;
     
-    protected virtual void Start()
-    { setupEnergy(); }
+    protected virtual void Start() { setupEnergy(); }
     
     protected void setupEnergy()
     {
@@ -17,11 +16,9 @@ public class Energy : MonoBehaviour
             energy = energyCapacity;
     }
     
-    public float getEnergy()
-        { return energy; }
+    public float getEnergy() { return energy; }
         
-    public float getEnergyCapacity()
-        { return energyCapacity; }
+    public float getEnergyCapacity() { return energyCapacity; }
         
     public bool decreaseEnergyBy(float amount)
     { 
@@ -43,6 +40,5 @@ public class Energy : MonoBehaviour
         return false;
     }
     
-    public void setEnergy(float amount)
-        { energy = amount; }
+    public void setEnergy(float amount) { energy = amount; }
 }
